@@ -6,6 +6,7 @@ import path from 'path'
 import uiRoute from "./ui/ui.route"
 import pageRoute from "./page/page.route";
 import assetRoute from "./assets/assets.route";
+import projectRoute from "./project/project.route";
 import renderHtml from "./render/render.controller";
 
 const app = express();
@@ -35,7 +36,7 @@ mongoose.connect(mongoUri, {
     console.log('Connected to Mongo')
 })
 
-
+app.use('/api/projects', projectRoute);
 app.use('/api/pages', pageRoute);
 app.use('/api/assets', assetRoute);
 app.use('/api/', uiRoute);
