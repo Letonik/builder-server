@@ -37,7 +37,7 @@ mongoose.connect(mongoUri, {
 })
 
 app.use('/api/projects', projectRoute);
-app.use('/api/pages', pageRoute);
+app.use('/api/pages', pageRoute); // <-- здесь будет метод для img
 app.use('/api/assets', assetRoute);
 app.use('/api/', uiRoute);
 app.get('/:pageId?', renderHtml);

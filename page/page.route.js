@@ -11,7 +11,7 @@ import {
 
 const pageRoute = express.Router();
 pageRoute.post('/', create); //Create Page
-pageRoute.post('/:pageId/content', changeContent); //Change HTML content from Editor
+pageRoute.post('/:pageId/content', changeContent); // HTML from Editor + здесь будет метод для img
 
 pageRoute.put('/:pageId', update);
 
