@@ -33,6 +33,13 @@ export const update = async (req, res) => {
   res.json(page);
 };
 export const changeContent = async (req, res) => {
+  /////////////////////////////////////////////
+  //////////////////////////
+  //////////
+  // Тут можно описать метод для сохранения изображений загруженных из редактора
+  //////////
+  //////////////////////////
+  /////////////////////////////////////////////
   const { pageId } = req.params;
   const pageContent = await savePageContent(pageId, req.body);
   res.json(pageContent);
